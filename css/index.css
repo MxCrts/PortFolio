@@ -1083,7 +1083,7 @@ button:hover .index {
 .contact-info {
   width: 40%;
   height: 500px;
-  background: url(../images/contact.jpg);
+  background: url(../images/contact.webp);
   background-position: center;
   background-size: cover;
   border-radius: 16px;
