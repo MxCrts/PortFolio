@@ -1,541 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maxime Cortes | Developer</title>
-    <!--favicon-img-->
-    <link rel="icon" type="image/png" href="images/knight.png" />
-    <!--favicon-img-->
-    <!--main css file should not be removed -->
-    <link rel="stylesheet" href="css/index.css" />
-    <!--main css file-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Maxime Cortes — Développeur mobile freelance React Native</title>
+    <meta
+      name="description"
+      content="Développeur mobile freelance React Native / Expo. Votre app mobile livrée en production, de la spécification à la publication sur l'App Store et Google Play."
+    />
+    <meta name="author" content="Maxime Cortes" />
+    <meta name="theme-color" content="#0f0f0f" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f0f0f'/%3E%3Ctext x='32' y='44' font-family='system-ui,sans-serif' font-size='28' font-weight='700' fill='%23f97316' text-anchor='middle'%3EMC%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!--contains all the div-->
-    <div id="all">
-      <!--mouse  follower-->
-      <div class="cursor"></div>
-      <!--mouse  follower-->
-      <!--loader-->
-      <div id="loader"><span class="color">Maxime</span>Cortes</div>
-      <!--loader-end-->
-      <!--link-screen-->
-      <div id="breaker"></div>
-      <div id="breaker-two"></div>
-      <!--link-screen-->
-      <!--Main-Section-->
-      <!--Navigator-fullscreen-->
-      <div id="navigation-content">
-        <div class="logo">
-          <img src="images/logo.png" alt="logo" />
-        </div>
-        <div class="navigation-close">
-          <span class="close-first"></span>
-          <span class="close-second"></span>
-        </div>
-        <div class="navigation-links">
-          <a href="#" data-text="HOME" id="home-link">HOME</a>
-          <a href="#" data-text="ABOUT" id="about-link">ABOUT</a>
-          <a href="#" data-text="PORTFOLIO" id="portfolio-link">PORTFOLIO</a>
-          <a href="#" data-text="CONTACT" id="contact-link">CONTACT</a>
-        </div>
-      </div>
-      <!--Navigator-Fullscreen END-->
-      <!--Home Page-->
-      <!--Menubar-->
-      <div id="navigation-bar">
-        <img src="images/logo.png" alt="logo" />
-        <div class="menubar">
-          <span class="first-span"></span>
-          <span class="second-span"></span>
-          <span class="third-span"></span>
-        </div>
-      </div>
-      <!--Menubar End-->
-      <!--Header-->
-      <div id="header">
-        <div id="particles"></div>
-        <!--Social Media Links-->
-        <div class="social-media-links">
-          <a href="https://www.linkedin.com/in/maximecortes/"
-            ><img
-              src="images/linkedin logo.png"
-              class="social-media"
-              alt="linkedin-logo"
-          /></a>
-          <a href="https://github.com/MxCrts"
-            ><img
-              src="images/GithubLogo.png"
-              class="social-media"
-              alt="github-logo"
-          /></a>
-        </div>
-        <!--Social Media Links end-->
-        <div class="header-content">
-          <div class="header-content-box">
-            <div class="firstline">
-              <span class="color">Maxime </span>Cortes
-            </div>
-            <div class="secondline">
-              I'm
-              <span
-                class="txt-rotate color"
-                data-period="1200"
-                data-rotate='[ " a Full Stack Developer.", " a Problem-Solver.", " Iron Man." ]'
-              ></span>
-              <span class="slash">|</span>
-            </div>
-          </div>
-        </div>
-        <!--header image-->
-        <div class="header-image">
-          <!-- <img src="images/man22.png" alt="logo" /> -->
-          <img src="images/man22.webp" alt="Hero Image" />
-        </div>
-        <!--header image end-->
-      </div>
-      <!--Header End-->
-      <!--HomePage End-->
-      <!--Main-Section End-->
-      <!--about-->
-      <div id="about">
-        <!--about content-->
-        <div id="about-content">
-          <div class="about-header">About <span class="color">Me</span></div>
-          <div class="about-main">
-            <div class="about-first-paragraph wow">
-              <!--about description-->
-              <span class="about-first-line">
-                I'm a
-                <span class="color">Full Stack Developer</span>
-                based in Perpignan, FRANCE
-              </span>
-              <br />
-              <span class="about-second-line">
-                As a self-taught developer with a master's in financial markets,
-                I excel in blending technical skills with financial insights to
-                solve complex problems efficiently. My dedication to continuous
-                learning and adaptation has honed my ability to quickly grasp
-                new technologies and approaches. Known for my determination,
-                discipline, and a strong work ethic, I consistently deliver
-                high-quality results, ensuring I never disappoint. My rapid
-                learning capability and problem-solving prowess make me a
-                valuable asset to any team, ready to make a meaningful impact
-                from day one.
-              </span>
-              <div class="cv">
-                <a target="blank" href="CV.pdf"
-                  ><button>Download <span class="colors">CV</span></button></a
-                >
-              </div>
-            </div>
-            <!--about picture-->
-            <div class="about-img">
-              <img src="images/about1.webp" loading="lazy" alt="Your Image" />
-            </div>
-          </div>
-        </div>
-        <!--services start-->
-        <div id="services">
-          <!--services header-->
-          <div class="services-heading wow">
-            <span class="color">My</span> Services
-          </div>
-          <!--services header end-->
-          <!--services content-->
-          <div class="services-content">
-            <div class="service-one service wow">
-              <div class="service-img">
-                <img
-                  src="images/web-design1.webp"
-                  loading="lazy"
-                  alt="service-one"
-                />
-              </div>
-              <div class="service-description">
-                <h2>Web Designing</h2>
-                <p>
-                  Leverage my expertise in HTML5, CSS, and JavaScript to craft
-                  visually appealing, responsive web designs that ensure a
-                  seamless experience on any device.
-                </p>
-              </div>
-            </div>
-            <div class="service-two service wow">
-              <div class="service-img">
-                <img
-                  src="images/front-end1.webp"
-                  loading="lazy"
-                  alt="service-two"
-                />
-              </div>
-              <div class="service-description">
-                <h2>Front End</h2>
-                <p>
-                  Specializing in React.js, I deliver dynamic, engaging user
-                  interfaces, using Redux for state management and Jest for
-                  robust testing, to enhance user satisfaction.
-                </p>
-              </div>
-            </div>
-            <div class="service-three service wow">
-              <div class="service-img">
-                <img
-                  src="images/back-end1.webp"
-                  loading="lazy"
-                  alt="service-three"
-                />
-              </div>
-              <div class="service-description">
-                <h2>Back End</h2>
-                <p>
-                  With Node.js, Express, MongoDB, PostgreSQL, and Docker, I
-                  build scalable, efficient backend solutions, integrating CI/CD
-                  and Redis for optimal performance and reliability.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--services content end-->
-        <!--services end-->
-        <div id="skills">
-          <div class="skills-header">My <span class="color"> Skills</span></div>
-          <div class="skills-content" style="text-align: center">
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">HTML5/CSS3</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Javascript</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">React</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">MongoDB</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">PostgreSQL</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Node.js</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Git / Github</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">BootStrap</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Redux</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Docker</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Redis</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">CI/CD</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">TypeScript</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Jest</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">AWS</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Express</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Python</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--copyright-section You Can Remove After Downloading-->
-        <div class="footer"></div>
-        <!--copyright-section-->
-      </div>
-      <!--about end-->
-      <!--portfolio-->
-      <div id="portfolio">
-        <div class="portfolio-header">
-          <span class="color"> My </span> Portfolio
-          <span class="header-caption">
-            Some Of My <span class="color"> Works</span></span
-          >
-        </div>
-        <div id="portfolio-content">
-          <div class="portfolio portfolio-first">
-            <div class="portfolio-image">
-              <img
-                src="images/loading.png"
-                loading="lazy"
-                alt="portfolio-first"
-              />
-            </div>
-            <div class="portfolio-text">
-              <h2>ChallengeTies</h2>
-              <p>
-                Mobile App, coming soon...
-              </p>
-              
-            </div>
-          </div>
-          <div class="portfolio portfolio-second">
-            <div class="portfolio-image">
-              <img
-                src="images/portfolio-second.gif"
-                loading="lazy"
-                alt="portfolio-second"
-              />
-            </div>
-            <div class="portfolio-text">
-              <h2>Natours App</h2>
-              <p>
-                Embark on an adventure with Natours, the ultimate app for
-                exploring and booking unique tours. From the depths of the ocean
-                with "Sea Explorer" to the heart of the forests with "Forest
-                Hiker," Natours offers a diverse range of experiences tailored
-                to every adventurer. Discover tours with detailed information
-                including price, guides, maximum group size, duration, and
-                difficulty level. With seamless integration of the Stripe API,
-                booking your next adventure is just a click away. Natours
-                combines convenience with exploration, inviting you to discover
-                the wonders of the world in a few taps.
-              </p>
-              <div class="button">
-                <a href="https://natourswebapp.onrender.com/"
-                  ><button>
-                    <span class="index">
-                      View Project !<i class="gg-arrow-right"></i
-                    ></span></button
-                ></a>
-                <a href="https://github.com/MxCrts/natours"
-                  ><button>
-                    <span class="index">
-                      Source Code<i class="gg-arrow-right"></i
-                    ></span></button
-                ></a>
-              </div>
-            </div>
-          </div>
+    <a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
 
-          <div class="portfolio portfolio-third">
-            <div class="portfolio-image">
-              <img
-                src="images/portfolio-third.gif"
-                loading="lazy"
-                alt="portfolio-third"
-              />
-            </div>
-            <div class="portfolio-text">
-              <h2>RecipIdea</h2>
-              <p>
-                Whet your appetite with RecipIdea, the innovative app currently
-                in development that promises to revolutionize daily meal
-                planning. Tailored to your tastes, whether you crave meaty
-                feasts or vegetarian delights, RecipIdea offers personalized
-                meal suggestions at your fingertips. Users can opt for a daily
-                surprise with three random recipes or refine their preferences
-                for customized recommendations. Designed for food lovers seeking
-                inspiration and variety, RecipIdea aims to make mealtime
-                exciting and effortless.
-              </p>
-              <div class="button">
-                <a href="https://recipidea.netlify.app/"
-                  ><button>
-                    <span class="index">
-                      View Project !<i class="gg-arrow-right"></i
-                    ></span></button
-                ></a>
-                <a href="https://github.com/MxCrts/RecipIdea"
-                  ><button>
-                    <span class="index">
-                      Source Code<i class="gg-arrow-right"></i
-                    ></span></button
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--copyright-section You Can Remove After Downloading-->
-        <div class="footer"></div>
-        <!--copyright-section-->
-      </div>
-      <!--portfolio end-->
-      <!--contact-->
-      <div id="contact">
-        <div class="contact-header">
-          Contact <span class="color"> Me</span>
-          <div class="contact-header-caption">
-            <span class="color"> Get</span> In Touch.
-          </div>
-        </div>
-        <div class="contact-content">
-          <!--Contact information-->
-          <div class="contact-info">
-            <div class="contact-info-header">Contact Info</div>
-            <div class="contact-info-content">
-              <div class="contect-info-content-line">
-                <img
-                  src="./images/icon-name.png"
-                  class="icon"
-                  alt="name-icon"
-                />
-                <div class="contact-info-icon-text">
-                  <h6>Name</h6>
-                  <p>Maxime Cortes</p>
-                </div>
-              </div>
-              <div class="contect-info-content-line">
-                <img
-                  src="./images/icon-location.png"
-                  class="icon"
-                  alt="location-icon"
-                />
-                <div class="contact-info-icon-text">
-                  <h6>Location</h6>
-                  <p>Perpignan, FRANCE</p>
-                </div>
-              </div>
-              <div class="contect-info-content-line">
-                <img
-                  src="./images/icon-phone.png"
-                  class="icon"
-                  alt="phone-icon"
-                />
-                <div class="contact-info-icon-text">
-                  <h6>Call</h6>
-                  <p>+33-7-70-28-33-31</p>
-                </div>
-              </div>
+    <!-- ================= Navigation ================= -->
+    <header class="nav">
+      <div class="wrap nav__inner">
+        <a class="nav__brand" href="#top">M<span>C</span></a>
 
-              <div class="contect-info-content-line">
-                <img
-                  src="./images/icon-email.png"
-                  class="icon"
-                  alt="email-icon"
-                />
-                <div class="contact-info-icon-text">
-                  <h6>Email</h6>
-                  <p>maxime.cortes.dev@gmail.com</p>
-                </div>
-              </div>
-            </div>
-            <!--Contact information end-->
+        <nav class="nav__links" aria-label="Navigation principale">
+          <a href="#challengeties" data-i18n="nav.work">Réalisation</a>
+          <a href="#offres" data-i18n="nav.services">Offres</a>
+          <a href="#projets" data-i18n="nav.projects">Projets</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+
+        <div class="nav__right">
+          <div class="lang" role="group" aria-label="Langue / Language">
+            <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
           </div>
         </div>
-        <div class="footer"></div>
       </div>
-      <!--contact end-->
-    </div>
-    <!--all the divisions-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/particles.min.js"></script>
-    <script src="js/index.js"></script>
-    <!--particles script-->
-    <script>
-      particlesJS("particles", {
-        particles: {
-          number: { value: 120, density: { enable: true, value_area: 800 } },
-          color: { value: "#ffffff" },
-          shape: {
-            type: "circle",
-            stroke: { width: 0, color: "#000000" },
-            polygon: { nb_sides: 5 },
-            image: { src: "img/github.svg", width: 100, height: 100 },
-          },
-          opacity: {
-            value: 0.5,
-            random: false,
-            anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false },
-          },
-          size: {
-            value: 3,
-            random: true,
-            anim: { enable: true, speed: 0, size_min: 0.1, sync: false },
-          },
-          line_linked: {
-            enable: false,
-            distance: 0,
-            color: "#ffffff",
-            opacity: 0.24463576890600452,
-            width: 1.2626362266116362,
-          },
-          move: {
-            enable: true,
-            speed: 3,
-            direction: "none",
-            random: false,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-            attract: { enable: false, rotateX: 600, rotateY: 1200 },
-          },
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: { enable: false, mode: "grab" },
-            onclick: { enable: true, mode: "push" },
-            resize: true,
-          },
-          modes: {
-            grab: { distance: 400, line_linked: { opacity: 1 } },
-            bubble: {
-              distance: 400,
-              size: 40,
-              duration: 2,
-              opacity: 8,
-              speed: 3,
-            },
-            repulse: { distance: 200, duration: 0.4 },
-            push: { particles_nb: 4 },
-            remove: { particles_nb: 2 },
-          },
-        },
-        retina_detect: true,
-      });
-    </script>
+    </header>
+
+    <main id="main">
+      <!-- Les sections sont ajoutées commit par commit. -->
+    </main>
+
+    <!-- ================= Pied de page ================= -->
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <p>© 2026 Maxime Cortes</p>
+        <p data-i18n="footer.legal">
+          Auto-entrepreneur · Facturation FR · Full remote (UTC+1)
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
   </body>
 </html>
