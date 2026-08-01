@@ -43,13 +43,14 @@
     "ct.subtitle": "— habits & duo",
     "ct.lead":
       "Designed, built and shipped solo, end to end: architecture, serverless backend, subscriptions, push notifications, 13 languages, store compliance.",
-    "ct.alt.duo":
-      "ChallengeTies duo challenge screen: two participants, progress bars and battle bar.",
-    "ct.alt.defis": "ChallengeTies challenge catalogue, sorted by category.",
-    "ct.alt.stats":
-      "ChallengeTies statistics screen: success rate, trophies and activity calendar.",
-    "ct.alt.classement":
-      "ChallengeTies leaderboard with global, national and regional filters.",
+    "ct.alt.choix":
+      "ChallengeTies onboarding screen: picking a challenge from an illustrated selection.",
+    "ct.alt.engagement":
+      "ChallengeTies commitment screen: the user writes their reason before starting a challenge.",
+    "ct.alt.check":
+      "Daily check-in in ChallengeTies: a 21-day challenge marked as done.",
+    "ct.alt.bilan":
+      "ChallengeTies weekly recap: momentum score, active days, trophies and best streak.",
     "ct.showcase": "Code & specs ↗",
     "ct.stackTitle": "Stack",
     "ct.tag.push": "Push notifications",
@@ -125,6 +126,7 @@
   FR["co.copied"] = "Adresse copiée ✓";
 
   var currentLang = "fr";
+  var localizedImages = document.querySelectorAll("img[data-src-fr]");
 
   function translate(lang) {
     var dict = lang === "en" ? EN : FR;
@@ -141,6 +143,12 @@
 
       k = el.dataset.i18nAlt;
       if (k && dict[k] !== undefined) el.alt = dict[k];
+    });
+
+    // Captures store : la langue de l'app doit suivre celle de la page.
+    localizedImages.forEach(function (img) {
+      var src = lang === "en" ? img.dataset.srcEn : img.dataset.srcFr;
+      if (src && img.getAttribute("src") !== src) img.setAttribute("src", src);
     });
 
     document.documentElement.lang = lang;
@@ -172,6 +180,31 @@
     stored = null;
   }
   if (stored === "en") translate("en");
+
+  /* Préchargement discret de l'autre jeu de captures.
+
+     Sans cela, la première bascule affiche un cadre vide le temps du
+     téléchargement. On attend que la page soit chargée puis un moment
+     d'inactivité, pour ne jamais concurrencer le premier rendu. */
+  function preloadOtherLanguage() {
+    var other = currentLang === "en" ? "fr" : "en";
+    localizedImages.forEach(function (img) {
+      var src = other === "en" ? img.dataset.srcEn : img.dataset.srcFr;
+      if (src) new Image().src = src;
+    });
+  }
+
+  var whenIdle =
+    window.requestIdleCallback ||
+    function (fn) {
+      setTimeout(fn, 1500);
+    };
+
+  if (document.readyState === "complete") whenIdle(preloadOtherLanguage);
+  else
+    window.addEventListener("load", function () {
+      whenIdle(preloadOtherLanguage);
+    });
 
   /* ==========================================================================
      2. Bloc mail : copie de secours
