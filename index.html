@@ -1,541 +1,467 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maxime Cortes | Developer</title>
-    <!--favicon-img-->
-    <link rel="icon" type="image/png" href="images/knight.png" />
-    <!--favicon-img-->
-    <!--main css file should not be removed -->
-    <link rel="stylesheet" href="css/index.css" />
-    <!--main css file-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Maxime Cortes — Développeur mobile freelance React Native</title>
+    <meta
+      name="description"
+      content="Développeur mobile freelance React Native / Expo. Votre app mobile livrée en production, de la spécification à la publication sur l'App Store et Google Play."
+    />
+    <meta name="author" content="Maxime Cortes" />
+    <meta name="theme-color" content="#0f0f0f" />
+    <link rel="canonical" href="https://mxcrts.github.io/PortFolio/" />
+
+    <!-- Aperçu au partage (LinkedIn, messageries) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:url" content="https://mxcrts.github.io/PortFolio/" />
+    <meta
+      property="og:title"
+      content="Maxime Cortes — Développeur mobile freelance React Native"
+    />
+    <meta
+      property="og:description"
+      content="Votre app mobile livrée en production, de la spécification à la publication sur l'App Store et Google Play."
+    />
+    <meta
+      property="og:image"
+      content="https://mxcrts.github.io/PortFolio/images/og.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Données structurées : profil professionnel -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Maxime Cortes",
+        "jobTitle": "Développeur mobile freelance",
+        "email": "maxime.cortes.dev@gmail.com",
+        "telephone": "+33770283331",
+        "url": "https://mxcrts.github.io/PortFolio/",
+        "knowsAbout": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Firebase",
+          "RevenueCat",
+          "iOS",
+          "Android"
+        ],
+        "sameAs": [
+          "https://github.com/MxCrts",
+          "https://www.linkedin.com/in/maximecortes/"
+        ]
+      }
+    </script>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f0f0f'/%3E%3Ctext x='32' y='44' font-family='system-ui,sans-serif' font-size='28' font-weight='700' fill='%23f97316' text-anchor='middle'%3EMC%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!--contains all the div-->
-    <div id="all">
-      <!--mouse  follower-->
-      <div class="cursor"></div>
-      <!--mouse  follower-->
-      <!--loader-->
-      <div id="loader"><span class="color">Maxime</span>Cortes</div>
-      <!--loader-end-->
-      <!--link-screen-->
-      <div id="breaker"></div>
-      <div id="breaker-two"></div>
-      <!--link-screen-->
-      <!--Main-Section-->
-      <!--Navigator-fullscreen-->
-      <div id="navigation-content">
-        <div class="logo">
-          <img src="images/logo.png" alt="logo" />
-        </div>
-        <div class="navigation-close">
-          <span class="close-first"></span>
-          <span class="close-second"></span>
-        </div>
-        <div class="navigation-links">
-          <a href="#" data-text="HOME" id="home-link">HOME</a>
-          <a href="#" data-text="ABOUT" id="about-link">ABOUT</a>
-          <a href="#" data-text="PORTFOLIO" id="portfolio-link">PORTFOLIO</a>
-          <a href="#" data-text="CONTACT" id="contact-link">CONTACT</a>
-        </div>
-      </div>
-      <!--Navigator-Fullscreen END-->
-      <!--Home Page-->
-      <!--Menubar-->
-      <div id="navigation-bar">
-        <img src="images/logo.png" alt="logo" />
-        <div class="menubar">
-          <span class="first-span"></span>
-          <span class="second-span"></span>
-          <span class="third-span"></span>
-        </div>
-      </div>
-      <!--Menubar End-->
-      <!--Header-->
-      <div id="header">
-        <div id="particles"></div>
-        <!--Social Media Links-->
-        <div class="social-media-links">
-          <a href="https://www.linkedin.com/in/maximecortes/"
-            ><img
-              src="images/linkedin logo.png"
-              class="social-media"
-              alt="linkedin-logo"
-          /></a>
-          <a href="https://github.com/MxCrts"
-            ><img
-              src="images/GithubLogo.png"
-              class="social-media"
-              alt="github-logo"
-          /></a>
-        </div>
-        <!--Social Media Links end-->
-        <div class="header-content">
-          <div class="header-content-box">
-            <div class="firstline">
-              <span class="color">Maxime </span>Cortes
-            </div>
-            <div class="secondline">
-              I'm
-              <span
-                class="txt-rotate color"
-                data-period="1200"
-                data-rotate='[ " a Full Stack Developer.", " a Problem-Solver.", " Iron Man." ]'
-              ></span>
-              <span class="slash">|</span>
-            </div>
+    <a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
+
+    <!-- ================= Navigation ================= -->
+    <header class="nav">
+      <div class="wrap nav__inner">
+        <a class="nav__brand" href="#top">M<span>C</span></a>
+
+        <nav class="nav__links" aria-label="Navigation principale">
+          <a href="#challengeties" data-i18n="nav.work">Réalisation</a>
+          <a href="#offres" data-i18n="nav.services">Offres</a>
+          <a href="#projets" data-i18n="nav.projects">Projets</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+
+        <div class="nav__right">
+          <div class="lang" role="group" aria-label="Langue / Language">
+            <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
           </div>
         </div>
-        <!--header image-->
-        <div class="header-image">
-          <!-- <img src="images/man22.png" alt="logo" /> -->
-          <img src="images/man22.webp" alt="Hero Image" />
-        </div>
-        <!--header image end-->
       </div>
-      <!--Header End-->
-      <!--HomePage End-->
-      <!--Main-Section End-->
-      <!--about-->
-      <div id="about">
-        <!--about content-->
-        <div id="about-content">
-          <div class="about-header">About <span class="color">Me</span></div>
-          <div class="about-main">
-            <div class="about-first-paragraph wow">
-              <!--about description-->
-              <span class="about-first-line">
-                I'm a
-                <span class="color">Full Stack Developer</span>
-                based in Perpignan, FRANCE
-              </span>
-              <br />
-              <span class="about-second-line">
-                As a self-taught developer with a master's in financial markets,
-                I excel in blending technical skills with financial insights to
-                solve complex problems efficiently. My dedication to continuous
-                learning and adaptation has honed my ability to quickly grasp
-                new technologies and approaches. Known for my determination,
-                discipline, and a strong work ethic, I consistently deliver
-                high-quality results, ensuring I never disappoint. My rapid
-                learning capability and problem-solving prowess make me a
-                valuable asset to any team, ready to make a meaningful impact
-                from day one.
-              </span>
-              <div class="cv">
-                <a target="blank" href="CV.pdf"
-                  ><button>Download <span class="colors">CV</span></button></a
-                >
-              </div>
-            </div>
-            <!--about picture-->
-            <div class="about-img">
-              <img src="images/about1.webp" loading="lazy" alt="Your Image" />
-            </div>
+    </header>
+
+    <main id="main">
+      <!-- ================= Hero ================= -->
+      <section class="hero" id="top">
+        <div class="wrap">
+          <p class="eyebrow" data-i18n="hero.eyebrow">
+            Développement mobile — de la spec aux stores
+          </p>
+
+          <h1 class="hero__title" data-i18n-html="hero.title">
+            Votre app mobile,<br />livrée en production.
+          </h1>
+
+          <p class="lead hero__lead" data-i18n="hero.lead">
+            Pas un CV — une preuve : une app complète, conçue et publiée seul,
+            monétisée, en production sur les deux stores.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contact" data-i18n="hero.cta1">
+              Discutons de votre projet →
+            </a>
+            <a class="btn btn--ghost" href="#challengeties" data-i18n="hero.cta2">
+              Voir ChallengeTies
+            </a>
           </div>
+
+          <ul class="facts">
+            <li>
+              <strong data-i18n="facts.rateValue">450 € / jour</strong>
+              <span data-i18n="facts.rate">TJM</span>
+            </li>
+            <li>
+              <strong data-i18n="facts.startValue">&lt; 2 semaines</strong>
+              <span data-i18n="facts.start">Démarrage</span>
+            </li>
+            <li>
+              <strong data-i18n="facts.remoteValue">Full remote</strong>
+              <span data-i18n="facts.remote">France · UTC+1</span>
+            </li>
+          </ul>
         </div>
-        <!--services start-->
-        <div id="services">
-          <!--services header-->
-          <div class="services-heading wow">
-            <span class="color">My</span> Services
+      </section>
+
+      <!-- ================= ChallengeTies — projet phare ================= -->
+      <section class="section" id="challengeties">
+        <div class="wrap">
+          <p class="eyebrow" data-i18n="ct.eyebrow">En production</p>
+
+          <h2 class="section-title">
+            ChallengeTies
+            <span class="section-title__sub" data-i18n="ct.subtitle">
+              — habitudes &amp; duo
+            </span>
+          </h2>
+
+          <p class="lead ct__lead" data-i18n="ct.lead">
+            Conçue, développée et publiée seul, de A à Z : architecture, backend
+            serverless, abonnements, notifications push, 13 langues, conformité
+            stores.
+          </p>
+
+          <!-- Captures : défilement horizontal sur mobile, grille sur desktop.
+               Les captures store existent en FR et en EN : data-src-fr /
+               data-src-en permettent au sélecteur de langue de les échanger. -->
+          <ul class="shots reveal">
+            <li>
+              <img
+                src="images/ct-choix-fr.webp"
+                data-src-fr="images/ct-choix-fr.webp"
+                data-src-en="images/ct-choix-en.webp"
+                width="620"
+                height="1342"
+                loading="lazy"
+                decoding="async"
+                alt="Écran de démarrage de ChallengeTies : choix d'un défi parmi une sélection illustrée."
+                data-i18n-alt="ct.alt.choix"
+              />
+            </li>
+            <li>
+              <img
+                src="images/ct-engagement-fr.webp"
+                data-src-fr="images/ct-engagement-fr.webp"
+                data-src-en="images/ct-engagement-en.webp"
+                width="620"
+                height="1342"
+                loading="lazy"
+                decoding="async"
+                alt="Écran d'engagement de ChallengeTies : l'utilisateur écrit sa raison avant de démarrer un défi."
+                data-i18n-alt="ct.alt.engagement"
+              />
+            </li>
+            <li>
+              <img
+                src="images/ct-check-fr.webp"
+                data-src-fr="images/ct-check-fr.webp"
+                data-src-en="images/ct-check-en.webp"
+                width="620"
+                height="1342"
+                loading="lazy"
+                decoding="async"
+                alt="Validation quotidienne dans ChallengeTies : défi de 21 jours marqué comme accompli."
+                data-i18n-alt="ct.alt.check"
+              />
+            </li>
+            <li>
+              <img
+                src="images/ct-bilan-fr.webp"
+                data-src-fr="images/ct-bilan-fr.webp"
+                data-src-en="images/ct-bilan-en.webp"
+                width="620"
+                height="1342"
+                loading="lazy"
+                decoding="async"
+                alt="Bilan hebdomadaire de ChallengeTies : score de momentum, jours actifs, trophées et meilleure série."
+                data-i18n-alt="ct.alt.bilan"
+              />
+            </li>
+          </ul>
+
+          <div class="ct__links">
+            <a
+              class="btn btn--primary"
+              href="https://apps.apple.com/app/id6751504640"
+              target="_blank"
+              rel="noopener"
+            >
+              App Store ↗
+            </a>
+            <a
+              class="btn btn--ghost"
+              href="https://play.google.com/store/apps/details?id=com.mxcrts.ChallengeTies"
+              target="_blank"
+              rel="noopener"
+            >
+              Google Play ↗
+            </a>
+            <a
+              class="btn btn--ghost"
+              href="https://github.com/MxCrts/challengeties-showcase"
+              target="_blank"
+              rel="noopener"
+              data-i18n="ct.showcase"
+            >
+              Code &amp; specs ↗
+            </a>
           </div>
-          <!--services header end-->
-          <!--services content-->
-          <div class="services-content">
-            <div class="service-one service wow">
-              <div class="service-img">
-                <img
-                  src="images/web-design1.webp"
-                  loading="lazy"
-                  alt="service-one"
-                />
-              </div>
-              <div class="service-description">
-                <h2>Web Designing</h2>
-                <p>
-                  Leverage my expertise in HTML5, CSS, and JavaScript to craft
-                  visually appealing, responsive web designs that ensure a
-                  seamless experience on any device.
+
+          <!-- Stack -->
+          <h3 class="minor-title" data-i18n="ct.stackTitle">Stack</h3>
+          <ul class="tags">
+            <li>React Native / Expo (EAS)</li>
+            <li>TypeScript</li>
+            <li>Firebase · Firestore</li>
+            <li>Cloud Functions</li>
+            <li>RevenueCat</li>
+            <li data-i18n="ct.tag.push">Notifications push</li>
+            <li>Apple / Google Sign-In</li>
+            <li data-i18n="ct.tag.i18n">i18n — 13 langues</li>
+            <li>Sentry</li>
+          </ul>
+
+          <!-- Engineering highlights -->
+          <h3 class="minor-title" data-i18n="ct.hlTitle">
+            Engineering highlights
+          </h3>
+          <ol class="highlights">
+            <li class="reveal">
+              <span class="highlights__num">01</span>
+              <div>
+                <h4 data-i18n="ct.hl1.title">
+                  Abonnements RevenueCat en production
+                </h4>
+                <p data-i18n="ct.hl1.body">
+                  Paywall, achats intégrés iOS et Android, gestion des états
+                  d'abonnement et conformité stores validée sur les deux
+                  plateformes.
                 </p>
               </div>
-            </div>
-            <div class="service-two service wow">
-              <div class="service-img">
-                <img
-                  src="images/front-end1.webp"
-                  loading="lazy"
-                  alt="service-two"
-                />
-              </div>
-              <div class="service-description">
-                <h2>Front End</h2>
-                <p>
-                  Specializing in React.js, I deliver dynamic, engaging user
-                  interfaces, using Redux for state management and Jest for
-                  robust testing, to enhance user satisfaction.
+            </li>
+            <li class="reveal">
+              <span class="highlights__num">02</span>
+              <div>
+                <h4 data-i18n="ct.hl2.title">Pipeline de correctif OTA</h4>
+                <p data-i18n="ct.hl2.body">
+                  Bug détecté en prod (Sentry), correctif développé, testé et
+                  déployé over-the-air sur iOS et Android en moins de 4 h, sans
+                  re-review stores.
                 </p>
               </div>
-            </div>
-            <div class="service-three service wow">
-              <div class="service-img">
-                <img
-                  src="images/back-end1.webp"
-                  loading="lazy"
-                  alt="service-three"
-                />
-              </div>
-              <div class="service-description">
-                <h2>Back End</h2>
-                <p>
-                  With Node.js, Express, MongoDB, PostgreSQL, and Docker, I
-                  build scalable, efficient backend solutions, integrating CI/CD
-                  and Redis for optimal performance and reliability.
+            </li>
+            <li class="reveal">
+              <span class="highlights__num">03</span>
+              <div>
+                <h4 data-i18n="ct.hl3.title">Internationalisation — 13 langues</h4>
+                <p data-i18n="ct.hl3.body">
+                  Architecture de traduction complète couvrant l'interface, les
+                  contenus et les fiches stores localisées.
                 </p>
               </div>
-            </div>
-          </div>
+            </li>
+          </ol>
         </div>
-        <!--services content end-->
-        <!--services end-->
-        <div id="skills">
-          <div class="skills-header">My <span class="color"> Skills</span></div>
-          <div class="skills-content" style="text-align: center">
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">HTML5/CSS3</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Javascript</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">React</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">MongoDB</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">PostgreSQL</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Node.js</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Git / Github</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">BootStrap</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Redux</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Docker</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Redis</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">CI/CD</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">TypeScript</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Jest</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">AWS</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Express</div>
-              </div>
-            </div>
-            <div class="skill-html skill">
-              <div class="skill-text">
-                <div class="html">Python</div>
-              </div>
-            </div>
-          </div>
+      </section>
+
+      <!-- ================= Offres ================= -->
+      <section class="section" id="offres">
+        <div class="wrap">
+          <p class="eyebrow" data-i18n="off.eyebrow">Ce que je fais pour vous</p>
+          <h2 class="section-title" data-i18n="off.title">Offres</h2>
+
+          <ul class="offers">
+            <li class="offer reveal">
+              <span class="offer__num">01</span>
+              <h3 data-i18n="off.1.title">Développement complet d'app mobile</h3>
+              <p data-i18n="off.1.body">
+                De la spécification à la publication sur les deux stores. Livré
+                en 6 à 8 semaines, TypeScript propre et documenté.
+              </p>
+            </li>
+            <li class="offer reveal">
+              <span class="offer__num">02</span>
+              <h3 data-i18n="off.2.title">Reprise &amp; sauvetage d'app existante</h3>
+              <p data-i18n="off.2.body">
+                Bugs, dette technique, review bloquée, dev parti : je reprends le
+                projet, je stabilise, je livre.
+              </p>
+            </li>
+            <li class="offer reveal">
+              <span class="offer__num">03</span>
+              <h3 data-i18n="off.3.title">Monétisation &amp; abonnements</h3>
+              <p data-i18n="off.3.body">
+                RevenueCat, paywall, achats intégrés, conformité stores. Éprouvé
+                en production sur iOS et Android.
+              </p>
+            </li>
+          </ul>
+
+          <h3 class="minor-title" data-i18n="off.terms">Conditions</h3>
+          <ul class="terms">
+            <li>
+              <strong data-i18n="terms.rateValue">450 € / jour</strong>
+              <span data-i18n="terms.rate">TJM</span>
+            </li>
+            <li>
+              <strong data-i18n="terms.availValue">10–12 j / mois</strong>
+              <span data-i18n="terms.avail">Disponibilité</span>
+            </li>
+            <li>
+              <strong data-i18n="terms.startValue">&lt; 2 semaines</strong>
+              <span data-i18n="terms.start">Démarrage</span>
+            </li>
+            <li>
+              <strong data-i18n="terms.depositValue">40 %</strong>
+              <span data-i18n="terms.deposit">Acompte au devis</span>
+            </li>
+          </ul>
         </div>
-        <!--copyright-section You Can Remove After Downloading-->
-        <div class="footer"></div>
-        <!--copyright-section-->
-      </div>
-      <!--about end-->
-      <!--portfolio-->
-      <div id="portfolio">
-        <div class="portfolio-header">
-          <span class="color"> My </span> Portfolio
-          <span class="header-caption">
-            Some Of My <span class="color"> Works</span></span
+      </section>
+
+      <!-- ================= Projets secondaires ================= -->
+      <section class="section" id="projets">
+        <div class="wrap">
+          <p class="eyebrow" data-i18n="pr.eyebrow">Aussi au catalogue</p>
+          <h2 class="section-title" data-i18n="pr.title">Autres réalisations</h2>
+
+          <ul class="projects">
+            <li class="project reveal">
+              <div class="project__head">
+                <h3>UNC 66</h3>
+                <span class="badge" data-i18n="pr.unc.badge">Client · Livré</span>
+              </div>
+              <p data-i18n="pr.unc.body">
+                Site associatif complet pour l'Union Nationale des Combattants
+                des Pyrénées-Orientales : pages éditoriales, espace adhésion et
+                contenus gérés via Firebase.
+              </p>
+              <ul class="tags tags--sm">
+                <li>React 19</li>
+                <li>Vite</li>
+                <li>Tailwind</li>
+                <li>Firebase</li>
+              </ul>
+              <!-- ===================================================== -->
+              <!--  URL PROVISOIRE — remplacer par le domaine définitif  -->
+              <!--  Une seule occurrence dans tout le site.              -->
+              <!-- ===================================================== -->
+              <a
+                class="project__link"
+                href="https://mxcrts.github.io/unc66/"
+                target="_blank"
+                rel="noopener"
+                data-i18n="pr.unc.link"
+              >
+                Voir le site ↗
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================= Contact ================= -->
+      <section class="section contact" id="contact">
+        <div class="wrap">
+          <p class="eyebrow" data-i18n="co.eyebrow">Contact</p>
+          <h2 class="section-title" data-i18n="co.title">
+            Un besoin mobile qui déborde ? Parlons-en.
+          </h2>
+
+          <a
+            class="mailbox"
+            href="mailto:maxime.cortes.dev@gmail.com?subject=Projet%20mobile%20%E2%80%94%20prise%20de%20contact"
           >
-        </div>
-        <div id="portfolio-content">
-          <div class="portfolio portfolio-first">
-            <div class="portfolio-image">
-              <img
-                src="images/loading.png"
-                loading="lazy"
-                alt="portfolio-first"
-              />
-            </div>
-            <div class="portfolio-text">
-              <h2>ChallengeTies</h2>
-              <p>
-                Mobile App, coming soon...
-              </p>
-              
-            </div>
-          </div>
-          <div class="portfolio portfolio-second">
-            <div class="portfolio-image">
-              <img
-                src="images/portfolio-second.gif"
-                loading="lazy"
-                alt="portfolio-second"
-              />
-            </div>
-            <div class="portfolio-text">
-              <h2>Natours App</h2>
-              <p>
-                Embark on an adventure with Natours, the ultimate app for
-                exploring and booking unique tours. From the depths of the ocean
-                with "Sea Explorer" to the heart of the forests with "Forest
-                Hiker," Natours offers a diverse range of experiences tailored
-                to every adventurer. Discover tours with detailed information
-                including price, guides, maximum group size, duration, and
-                difficulty level. With seamless integration of the Stripe API,
-                booking your next adventure is just a click away. Natours
-                combines convenience with exploration, inviting you to discover
-                the wonders of the world in a few taps.
-              </p>
-              <div class="button">
-                <a href="https://natourswebapp.onrender.com/"
-                  ><button>
-                    <span class="index">
-                      View Project !<i class="gg-arrow-right"></i
-                    ></span></button
-                ></a>
-                <a href="https://github.com/MxCrts/natours"
-                  ><button>
-                    <span class="index">
-                      Source Code<i class="gg-arrow-right"></i
-                    ></span></button
-                ></a>
-              </div>
-            </div>
-          </div>
+            <span class="mailbox__label" data-i18n="co.mailLabel">
+              Écrivez-moi
+            </span>
+            <span class="mailbox__value">maxime.cortes.dev@gmail.com</span>
+            <span class="mailbox__arrow" aria-hidden="true">→</span>
+            <span class="mailbox__hint" data-i18n="co.copyHint">
+              Ouvre votre messagerie — ou copie l'adresse si aucune n'est
+              configurée
+            </span>
+          </a>
 
-          <div class="portfolio portfolio-third">
-            <div class="portfolio-image">
-              <img
-                src="images/portfolio-third.gif"
-                loading="lazy"
-                alt="portfolio-third"
-              />
-            </div>
-            <div class="portfolio-text">
-              <h2>RecipIdea</h2>
-              <p>
-                Whet your appetite with RecipIdea, the innovative app currently
-                in development that promises to revolutionize daily meal
-                planning. Tailored to your tastes, whether you crave meaty
-                feasts or vegetarian delights, RecipIdea offers personalized
-                meal suggestions at your fingertips. Users can opt for a daily
-                surprise with three random recipes or refine their preferences
-                for customized recommendations. Designed for food lovers seeking
-                inspiration and variety, RecipIdea aims to make mealtime
-                exciting and effortless.
-              </p>
-              <div class="button">
-                <a href="https://recipidea.netlify.app/"
-                  ><button>
-                    <span class="index">
-                      View Project !<i class="gg-arrow-right"></i
-                    ></span></button
-                ></a>
-                <a href="https://github.com/MxCrts/RecipIdea"
-                  ><button>
-                    <span class="index">
-                      Source Code<i class="gg-arrow-right"></i
-                    ></span></button
-                ></a>
-              </div>
-            </div>
-          </div>
+          <ul class="channels">
+            <li>
+              <span class="channels__label" data-i18n="co.phone">Téléphone</span>
+              <a href="tel:+33770283331">+33 7 70 28 33 31</a>
+            </li>
+            <li>
+              <span class="channels__label">LinkedIn</span>
+              <a
+                href="https://www.linkedin.com/in/maximecortes/"
+                target="_blank"
+                rel="noopener"
+                >/in/maximecortes ↗</a
+              >
+            </li>
+            <li>
+              <span class="channels__label">GitHub</span>
+              <a href="https://github.com/MxCrts" target="_blank" rel="noopener"
+                >@MxCrts ↗</a
+              >
+            </li>
+            <li>
+              <span class="channels__label" data-i18n="co.stores">
+                ChallengeTies
+              </span>
+              <a
+                href="https://apps.apple.com/app/id6751504640"
+                target="_blank"
+                rel="noopener"
+                >App Store ↗</a
+              >
+              <a
+                href="https://play.google.com/store/apps/details?id=com.mxcrts.ChallengeTies"
+                target="_blank"
+                rel="noopener"
+                >Google Play ↗</a
+              >
+            </li>
+          </ul>
         </div>
-        <!--copyright-section You Can Remove After Downloading-->
-        <div class="footer"></div>
-        <!--copyright-section-->
-      </div>
-      <!--portfolio end-->
-      <!--contact-->
-      <div id="contact">
-        <div class="contact-header">
-          Contact <span class="color"> Me</span>
-          <div class="contact-header-caption">
-            <span class="color"> Get</span> In Touch.
-          </div>
-        </div>
-        <div class="contact-content">
-          <!--Contact information-->
-          <div class="contact-info">
-            <div class="contact-info-header">Contact Info</div>
-            <div class="contact-info-content">
-              <div class="contect-info-content-line">
-                <img
-                  src="./images/icon-name.png"
-                  class="icon"
-                  alt="name-icon"
-                />
-                <div class="contact-info-icon-text">
-                  <h6>Name</h6>
-                  <p>Maxime Cortes</p>
-                </div>
-              </div>
-              <div class="contect-info-content-line">
-                <img
-                  src="./images/icon-location.png"
-                  class="icon"
-                  alt="location-icon"
-                />
-                <div class="contact-info-icon-text">
-                  <h6>Location</h6>
-                  <p>Perpignan, FRANCE</p>
-                </div>
-              </div>
-              <div class="contect-info-content-line">
-                <img
-                  src="./images/icon-phone.png"
-                  class="icon"
-                  alt="phone-icon"
-                />
-                <div class="contact-info-icon-text">
-                  <h6>Call</h6>
-                  <p>+33-7-70-28-33-31</p>
-                </div>
-              </div>
+      </section>
+    </main>
 
-              <div class="contect-info-content-line">
-                <img
-                  src="./images/icon-email.png"
-                  class="icon"
-                  alt="email-icon"
-                />
-                <div class="contact-info-icon-text">
-                  <h6>Email</h6>
-                  <p>maxime.cortes.dev@gmail.com</p>
-                </div>
-              </div>
-            </div>
-            <!--Contact information end-->
-          </div>
-        </div>
-        <div class="footer"></div>
+    <!-- ================= Pied de page ================= -->
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <p>© 2026 Maxime Cortes</p>
+        <p data-i18n="footer.legal">
+          Auto-entrepreneur · Facturation FR · Full remote (UTC+1)
+        </p>
       </div>
-      <!--contact end-->
-    </div>
-    <!--all the divisions-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/particles.min.js"></script>
-    <script src="js/index.js"></script>
-    <!--particles script-->
-    <script>
-      particlesJS("particles", {
-        particles: {
-          number: { value: 120, density: { enable: true, value_area: 800 } },
-          color: { value: "#ffffff" },
-          shape: {
-            type: "circle",
-            stroke: { width: 0, color: "#000000" },
-            polygon: { nb_sides: 5 },
-            image: { src: "img/github.svg", width: 100, height: 100 },
-          },
-          opacity: {
-            value: 0.5,
-            random: false,
-            anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false },
-          },
-          size: {
-            value: 3,
-            random: true,
-            anim: { enable: true, speed: 0, size_min: 0.1, sync: false },
-          },
-          line_linked: {
-            enable: false,
-            distance: 0,
-            color: "#ffffff",
-            opacity: 0.24463576890600452,
-            width: 1.2626362266116362,
-          },
-          move: {
-            enable: true,
-            speed: 3,
-            direction: "none",
-            random: false,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-            attract: { enable: false, rotateX: 600, rotateY: 1200 },
-          },
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: { enable: false, mode: "grab" },
-            onclick: { enable: true, mode: "push" },
-            resize: true,
-          },
-          modes: {
-            grab: { distance: 400, line_linked: { opacity: 1 } },
-            bubble: {
-              distance: 400,
-              size: 40,
-              duration: 2,
-              opacity: 8,
-              speed: 3,
-            },
-            repulse: { distance: 200, duration: 0.4 },
-            push: { particles_nb: 4 },
-            remove: { particles_nb: 2 },
-          },
-        },
-        retina_detect: true,
-      });
-    </script>
+    </footer>
+
+    <script src="js/main.js" defer></script>
   </body>
 </html>
