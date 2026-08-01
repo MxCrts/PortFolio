@@ -649,6 +649,20 @@ button {
   color: var(--accent);
 }
 
+/* Indication sous l'adresse : devient un accusé de copie au clic. */
+.mailbox__hint {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: var(--muted-dim);
+  transition: color 0.2s ease;
+}
+
+.mailbox__hint.is-copied {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 /* Autres canaux */
 .channels {
   display: grid;

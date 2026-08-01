@@ -96,6 +96,8 @@
     "co.eyebrow": "Contact",
     "co.title": "A mobile project overflowing? Let's talk.",
     "co.mailLabel": "Email me",
+    "co.copyHint": "Opens your mail app — or copies the address if none is set up",
+    "co.copied": "Address copied ✓",
     "co.phone": "Phone",
     "co.stores": "ChallengeTies",
 
@@ -119,8 +121,14 @@
     if (el.dataset.i18nAlt) FR[el.dataset.i18nAlt] = el.alt;
   });
 
+  // Chaîne sans équivalent dans le DOM : elle n'apparaît qu'après un clic.
+  FR["co.copied"] = "Adresse copiée ✓";
+
+  var currentLang = "fr";
+
   function translate(lang) {
     var dict = lang === "en" ? EN : FR;
+    currentLang = lang;
 
     nodes.forEach(function (el) {
       var k;
@@ -166,7 +174,46 @@
   if (stored === "en") translate("en");
 
   /* ==========================================================================
-     2. Révélation au défilement
+     2. Bloc mail : copie de secours
+
+     Le href mailto: reste en place et fonctionne pour qui a un client mail
+     configuré. Quand ce n'est pas le cas, le navigateur n'affiche rien du
+     tout : on copie alors l'adresse dans le presse-papier et on l'annonce,
+     pour que le clic ne soit jamais sans effet.
+     ========================================================================== */
+  var mailbox = document.querySelector(".mailbox");
+
+  if (mailbox) {
+    var hint = mailbox.querySelector(".mailbox__hint");
+    var address = mailbox.querySelector(".mailbox__value").textContent.trim();
+    var hintTimer;
+
+    mailbox.addEventListener("click", function () {
+      // Pas de preventDefault : le mailto: doit continuer à s'ouvrir.
+      if (!navigator.clipboard || !hint) return;
+
+      navigator.clipboard.writeText(address).then(
+        function () {
+          var dict = currentLang === "en" ? EN : FR;
+          hint.textContent = dict["co.copied"];
+          hint.classList.add("is-copied");
+
+          clearTimeout(hintTimer);
+          hintTimer = setTimeout(function () {
+            var d = currentLang === "en" ? EN : FR;
+            hint.textContent = d["co.copyHint"];
+            hint.classList.remove("is-copied");
+          }, 2600);
+        },
+        function () {
+          /* presse-papier refusé (hors HTTPS, permission) : on ne fait rien */
+        }
+      );
+    });
+  }
+
+  /* ==========================================================================
+     3. Révélation au défilement
      ========================================================================== */
   var revealables = document.querySelectorAll(".reveal");
 
