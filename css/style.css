@@ -534,6 +534,75 @@ button {
   }
 }
 
+/* --- Projets secondaires ------------------------------------------------ */
+.projects {
+  display: grid;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.project {
+  padding: 26px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.project__head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.project h3 {
+  font-size: 1.14rem;
+  font-weight: 600;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  background: rgba(249, 115, 22, 0.1);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.project p {
+  color: var(--muted);
+  font-size: 0.94rem;
+  max-width: 62ch;
+  margin-bottom: 16px;
+}
+
+.tags--sm li {
+  padding: 5px 11px;
+  font-size: 0.78rem;
+}
+
+.project__link {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.project__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* --- Pied de page ------------------------------------------------------- */
 .footer {
   border-top: 1px solid var(--border);
