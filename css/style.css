@@ -263,6 +263,69 @@ button {
   }
 }
 
+/* --- Hero --------------------------------------------------------------- */
+.hero {
+  padding-block: clamp(64px, 11vw, 132px);
+  /* halo orange très discret, purement CSS (aucune image) */
+  background:
+    radial-gradient(
+      70ch 40ch at 12% -10%,
+      rgba(249, 115, 22, 0.09),
+      transparent 70%
+    ),
+    var(--bg);
+}
+
+.hero__title {
+  font-size: var(--step-h1);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.hero__lead {
+  margin-bottom: 34px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.hero__actions .btn {
+  flex: 1 1 auto;
+}
+
+@media (min-width: 560px) {
+  .hero__actions .btn {
+    flex: 0 0 auto;
+  }
+}
+
+/* Bandeau de faits : TJM, démarrage, remote */
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.facts strong {
+  display: block;
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.facts span {
+  font-size: 0.8rem;
+  color: var(--muted-dim);
+}
+
 /* --- Pied de page ------------------------------------------------------- */
 .footer {
   border-top: 1px solid var(--border);
